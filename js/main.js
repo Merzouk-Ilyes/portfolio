@@ -1,5 +1,14 @@
 /*===== SHOW MENU =====*/
-
+const showMenu= (toggleId,navId) => {
+    const toggle =document.getElementById(toggleId) ,
+    nav =document.getElementById(navId);
+    if (nav && toggle) {
+        toggle.addEventListener('click' , ()=> {
+            nav.classList.toggle('show-menu');
+        })
+    }
+}
+showMenu('nav_toggle','nav_menu');
 
 /*===== REMOVE MENU MOBILE =====*/
 
