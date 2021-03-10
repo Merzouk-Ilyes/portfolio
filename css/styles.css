@@ -208,7 +208,28 @@ bd-grid{
 }
 
 /*===== SCROLL TOP =====*/
+.scrolltop{
+  position: fixed;
+  right: 1rem;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:.5rem;
+  background: rgb(123,111 ,113,.7);
+  border-radius: .5rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  /* visibility: hidden; */
+}
+.scrolltop:hover{
+  background-color: var(--first-color);
 
+}
+.scrolltop_icon{
+  font-size: 2rem;
+  color: var(--first-color-lighten);
+}
 
 /* Show scroll top */
 
