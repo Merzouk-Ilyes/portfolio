@@ -8,12 +8,12 @@ const showMenu= (toggleId,navId) => {
         })
     }
 }
-showMenu('nav_toggle','nav_menu');
+showMenu('nav_toggle','nav-menu');
 
 /*===== REMOVE MENU MOBILE =====*/
 const nav_link=document.querySelectorAll(".nav_link");
 function linkAction(){
-    const navMenu=document.getElementById("nav_menu");
+    const navMenu=document.getElementById("nav-menu");
     navMenu.classList.remove("show-menu");
 }
 nav_link.forEach(n => n.addEventListener('click' , linkAction()))
@@ -22,11 +22,13 @@ nav_link.forEach(n => n.addEventListener('click' , linkAction()))
 /*===== SCROLL SECTIONS ACTIVE LINK =====*/
 const sections=document.querySelectorAll('section[id]')
 function scrollActive(){
-    const scrollY=window.pageYOffset;
+    const scrollY=window.pageYOffset
     sections.forEach(current => {
+        console.log(current)
         const sectionheight=current.offsetHeight;
-        const sectiontop=current.offsetTop- 50 ;
+        const sectiontop=current.offsetTop - 50 ;
         sectionId = current.getAttribute('id');
+        console.log(sectionId);
         if(scrollY > sectiontop && scrollY <= sectiontop + sectionheight ){
             document.querySelector('.nav_menu a[href=' + sectionId + ']').classList.add('active-link');
         } else {
@@ -34,7 +36,7 @@ function scrollActive(){
         }
     })
 }
-window.addEventListener('scroll' , scrollActive)
+window.addEventListener('scroll' , scrollActive);
 
 /*===== CHANGE BACKGROUND HEADER =====*/ 
 function scrollHeader(){
@@ -45,7 +47,12 @@ function scrollHeader(){
 window.addEventListener('scroll' ,scrollHeader);
 
 /*===== SHOW SCROLL TOP =====*/ 
-
+function scrollTop(){
+    const scrollTop = document.getElementById('scroll-top')
+    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll');
+    else  scrollTop.classList.remove('show-scroll');
+}
+window.addEventListener('scroll' ,scrollTop);
 
 /*===== MIXITUP FILTER PORTFOLIO =====*/ 
 
