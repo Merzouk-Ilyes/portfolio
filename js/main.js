@@ -78,3 +78,12 @@ linkportfolio.forEach(l => l.addEventListener('click' , activeportfolio))
 
 
 /*===== GSAP ANIMATION =====*/
+gsap.from('.home__img' ,{opacity :0 ,duration :2 ,delay:.5,x:60})
+gsap.from('.home__data' ,{opacity :0 ,duration :2 ,delay:.8,y:25})
+gsap.from('.home__greeting ,.home__name,.home__profession ,.button' ,{opacity :0 ,duration :2 ,delay:1,y:25 ,ease:'expo.out' ,stagger:.2})
+gsap.from('.nav_logo ,.nav_toggle' ,{opacity :0 ,duration :2 ,delay:1,y:25 ,ease:'expo.out' ,stagger:.2})
+gsap.from('.nav_item' ,{opacity :0 ,duration :2 ,delay:1.8,y:25 ,ease:'expo.out' ,stagger:.2})
+gsap.from('.home__social-icon' ,{opacity :0 ,duration :2 ,delay:2.3,y:25 ,ease:'expo.out' ,stagger:.2})
+gsap.from('.section-subtitle ,.section-title,.about__img, .about__description ,.about__number ,.about__achievement'
+ ,{opacity :0 ,duration :2 ,delay:2.3,y:25 ,ease:'expo.out' ,stagger:.2})
+ 
